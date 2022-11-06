@@ -5,7 +5,6 @@ const servicesMenuContent = document.querySelector('.second-page-service-opinion
 let index = 0;
 
 servicesMenu.addEventListener('click', (event) =>{
-    console.log(event);
      for(tab of servicesMenu.children){
          tab.classList.remove('active');     
      }
@@ -15,12 +14,54 @@ servicesMenu.addEventListener('click', (event) =>{
             index = i;
         }
      }
-     activeContent (index);
+     activeContent (index, servicesMenuContent);
 })
 
-function activeContent (index){
-    for(tab of servicesMenuContent){
+function activeContent (index, array){
+    for(tab of array){
         tab.classList.remove('active');
     }
-    servicesMenuContent[index].classList.add('active');
+    array[index].classList.add('active');
 }
+
+
+// work
+
+const workMenu = document.querySelector('.our-work-list');
+const workMenuImgItem =document.querySelectorAll(".our-work-img-item");
+
+console.log(workMenuImgItem);
+
+function filterImg (name){
+    for (item of workMenuImgItem) {
+        item.style.display ='none'; 
+    }
+    if(name === 'All'){
+        let i = 0;
+        for (item of workMenuImgItem) {
+                item.style.display ='block'; 
+                i++;
+                if(i === 12){
+                    return;
+                }
+        }
+            return;
+        }
+
+    for (let i = 0; i < workMenuImgItem.length; i++) {
+        if(name === workMenuImgItem[i].dataset.index){
+            workMenuImgItem[i].style.display ='block';
+        }
+    }
+}
+
+workMenu.addEventListener('click', (event) =>{
+    for(tab of workMenu.children){
+        tab.classList.remove('active-item');     
+    }
+   event.target.classList.add('active-item');
+   filterImg(event.target.textContent);
+})
+
+
+

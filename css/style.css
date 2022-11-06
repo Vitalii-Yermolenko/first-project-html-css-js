@@ -31,10 +31,8 @@ button{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 380px;
+    padding: 0 20%;
     box-sizing: border-box;
-    
-
 }
 
 
@@ -184,6 +182,7 @@ button{
     color: #717171;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .second-page-service-menu-item:hover{
@@ -196,14 +195,19 @@ button{
     color: #fff;
 }
 
-/* .rectangl.active{
+.second-page-service-menu-item.active::after{
+    position: absolute;
+    top: 100%;
+    content: '';
     width: 0;
     height: 0;
     border: 0 solid transparent;
-    border-left-width: 27px;
-    border-right-width: 27px;
-    border-top: 27px solid black;
-} */
+    left: 50%;
+    transform: translate(-50%, 0);
+    border-left-width: 13px;
+    border-right-width: 13px;
+    border-top: 13px solid #18CFAB;
+} 
 
 
 
@@ -280,10 +284,231 @@ button{
 }
 
 
-/* our Work/
+/* our Work*/
+
+.our-work{
+    background: #E9EDEF;
+    box-sizing: border-box;
+    padding-top: 96px;
+    padding-bottom: 100px;
+}
+
+.our-work-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+
+.our-work-title{
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    margin-bottom: 24px;
+    color: #4E4E4E;
+}
 
 
 
+.our-work-list{
+    display: flex;
+    height: 58px;
+    margin-top: 69px;
+}
+
+.our-work-list-item{
+    background: rgba(0, 0, 0, 0.0001);
+    border: 1px solid #DADADA;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 42px;
+    color: #717171;
+    padding: 15px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.our-work-list-item.active-item{
+    border: 2px solid #18CFAB;
+    color: #18CFAB;
+}
+
+.our-work-img-content{
+    margin: 70px 20%;
+}
+
+.our-work-img-list{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.our-work-img-item{
+    width: 285px;
+    height: 211px;
+    background-repeat: no-repeat;
+}
+
+
+.webDesign1{
+    background-image: url(../img/ourWork/webDesign/web-design1.jpg);
+
+}
+
+.webDesign2{
+    background-image: url(../img/ourWork/webDesign/web-design2.jpg);
+}
+
+.webDesign3{
+    background-image: url(../img/ourWork/webDesign/web-design3.jpg);
+}
+
+.webDesign4{
+    background-image: url(../img/ourWork/webDesign/web-design4.jpg);
+}
+
+.webDesign5{
+    background-image: url(../img/ourWork/webDesign/web-design5.jpg);
+}
+
+.webDesign6{
+    background-image: url(../img/ourWork/webDesign/web-design6.jpg);
+}
+
+.webDesign7{
+    background-image: url(../img/ourWork/webDesign/web-design7.jpg);
+}
+
+.graphicDesign1{
+    background-image: url(../img/ourWork/graphicDesign/graphic-design1.jpg);
+}
+
+.graphicDesign2{
+    background-image: url(../img/ourWork/graphicDesign/graphic-design2.jpg);
+}
+
+.graphicDesign3{
+    background-image: url(../img/ourWork/graphicDesign/graphic-design3.jpg);
+}
+
+.graphicDesign4{
+    background-image: url(../img/ourWork/graphicDesign/graphic-design4.jpg);
+}
+
+.graphicDesign5{
+    background-image: url(../img/ourWork/graphicDesign/graphic-design5.jpg);
+}
+
+.graphicDesign6{
+    background-image: url(../img/ourWork/graphicDesign/graphic-design6.jpg);
+}
+
+.graphicDesign7{
+    background-image: url(../img/ourWork/graphicDesign/graphic-design7.jpg);
+}
+
+.graphicDesign8{
+    background-image: url(../img/ourWork/graphicDesign/graphic-design8.jpg);
+}
+
+.graphicDesign9{
+    background-image: url(../img/ourWork/graphicDesign/graphic-design9.jpg);
+}
+
+.graphicDesign10{
+    background-image: url(../img/ourWork/graphicDesign/graphic-design10.jpg);
+}
+
+.graphicDesign11{
+    background-image: url(../img/ourWork/graphicDesign/graphic-design11.jpg);
+}
+
+.graphicDesign12{
+    background-image: url(../img/ourWork/graphicDesign/graphic-design12.jpg);
+}
+
+.landingPage1{
+    background-image: url(../img/ourWork/landingPage/landing-page1.jpg);
+}
+
+.landingPage2{
+    background-image: url(../img/ourWork/landingPage/landing-page2.jpg);
+}
+
+.landingPage3{
+    background-image: url(../img/ourWork/landingPage/landing-page3.jpg);
+}
+
+.landingPage4{
+    background-image: url(../img/ourWork/landingPage/landing-page4.jpg);
+}
+
+.landingPage5{
+    background-image: url(../img/ourWork/landingPage/landing-page5.jpg);
+}
+
+.landingPage6{
+    background-image: url(../img/ourWork/landingPage/landing-page6.jpg);
+}
+
+.landingPage7{
+    background-image: url(../img/ourWork/landingPage/landing-page7.jpg);
+}
+
+.wordpress1{
+    background-image: url(../img/ourWork/wordpress/wordpress1.jpg);
+}
+
+.wordpress2{
+    background-image: url(../img/ourWork/wordpress/wordpress2.jpg);
+}
+
+.wordpress3{
+    background-image: url(../img/ourWork/wordpress/wordpress3.jpg);
+}
+
+.wordpress4{
+    background-image: url(../img/ourWork/wordpress/wordpress4.jpg);
+}
+
+.wordpress5{
+    background-image: url(../img/ourWork/wordpress/wordpress5.jpg);
+}
+
+.wordpress6{
+    background-image: url(../img/ourWork/wordpress/wordpress6.jpg);
+}
+
+.wordpress1{
+    background-image: url(../img/ourWork/wordpress/wordpress1.jpg);
+}
+
+.wordpress7{
+    background-image: url(../img/ourWork/wordpress/wordpress7.jpg);
+}
+
+.wordpress8{
+    background-image: url(../img/ourWork/wordpress/wordpress8.jpg);
+}
+
+.wordpress9{
+    background-image: url(../img/ourWork/wordpress/wordpress9.jpg);
+}
+
+.wordpress10{
+    background-image: url(../img/ourWork/wordpress/wordpress10.jpg);
+}
+
+.our-work-load-button{
+    color: #fff;
+    background: #18CFAB;
+    width: 168px;
+    height: 63px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 42px;
+}
 /* News*/
 
 .breaking-news-content{
