@@ -50,10 +50,36 @@ button{
     line-height: 24px;
 }
 
+.symbol{
+font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+}
+
+.header-menu-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .header-menu-item:hover{
     color: #18CFAB;
+    border-bottom: #18CFAB 2px solid;
+    padding-top: 46px;
+    padding-bottom: 45px;
+    position: relative;
 }
+
 
 .first-page-content{
     margin-top: 264px ;
@@ -87,6 +113,7 @@ button{
     margin-top: 130px;
     gap: 26px;
     justify-content: center;
+
 }
 
 .explore-now-button{
@@ -98,6 +125,9 @@ button{
     line-height: 32px;
     width: 168px;
     height: 63px; 
+    border: none;
+    border-top: #fff 5px solid;
+    border-radius: 3%;
 }
 
 .purchase-button{
@@ -109,6 +139,15 @@ button{
     line-height: 32px;
     width: 168px;
     height: 63px;
+    border: none;
+    border-top: #fff 5px solid;
+    border-radius: 3%;
+}
+
+.small-btn-click:active{
+    transform: translateY(-5px);
+    border: none;
+    transition: 0.1s;
 }
 
 /* menu*/
@@ -117,6 +156,9 @@ button{
     grid-template-columns: repeat(4,1fr);
     height: 377px;
     text-transform: uppercase;
+    border: none;
+    border-top: #fff 8px solid;
+    cursor: pointer;
 }
 
 .second-page-menu-first-item{
@@ -127,6 +169,7 @@ button{
     align-items: center;
     flex-direction:column;
     gap: 47px;
+
 }
 
 .second-page-menu-second-item{
@@ -137,6 +180,12 @@ button{
     align-items: center;
     flex-direction:column;
     gap: 58px;
+}
+
+.big-btn-click:active{
+    transform: translateY(-8px);
+    border: none;
+    transition: 0.1s;
 }
 
 /* our services*/
@@ -281,6 +330,10 @@ button{
     line-height: 32px;
     width: 168px;
     height: 63px;
+    border: none;
+    border-top: #fff 5px solid;
+    cursor: pointer;
+    border-radius: 3%;
 }
 
 
@@ -342,18 +395,20 @@ button{
 .our-work-img-list{
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,206px);
+    height: 618px;
 }
 
 .our-work-img-item{
     width: 285px;
     height: 211px;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 
 .webDesign1{
     background-image: url(../img/ourWork/webDesign/web-design1.jpg);
-
 }
 
 .webDesign2{
@@ -500,7 +555,50 @@ button{
     background-image: url(../img/ourWork/wordpress/wordpress10.jpg);
 }
 
+
+.our-work-img-item-hover{
+    position: relative;
+    top: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: #18CFAB 6px solid;
+    padding-top: 46px;
+    background: #E9EDEF;
+}
+
+.our-work-img-item-hover{
+    opacity: 0;
+}
+.our-work-img-item:hover .our-work-img-item-hover{
+    transform: translateY(-211px);
+    transition: 0.5s;
+    opacity: 1;
+}
+
+
+.our-work-img-item-hover-img{
+    height: 43px;
+    padding-bottom: 24px;
+}
+
+.our-work-img-item-hover-title{
+    font-weight: 700;
+    font-size: 14.1771px;
+    line-height: 25px;
+    text-transform: uppercase;
+}
+
+.our-work-img-item-hover-text{
+    font-weight: 300;
+    font-size: 12.1518px;
+    line-height: 25px;
+    color: #8A8A8A;
+    margin-bottom: 37px;
+}
+
 .our-work-load-button{
+    position: relative;
     color: #fff;
     background: #18CFAB;
     width: 168px;
@@ -508,6 +606,16 @@ button{
     font-weight: 700;
     font-size: 14px;
     line-height: 42px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    justify-content: center;
+    text-transform: uppercase;
+
+}
+
+.plus{
+    font-size: 28px;
 }
 /* News*/
 
@@ -620,6 +728,148 @@ button{
 
 /* Coments*/
 
+.say-about-us{
+    background-image: url(../img/SectionsBackground/section-3.jpg);
+    background-repeat: no-repeat;
+    height: 853px;
+    padding: 98px 20% 104px;
+    box-sizing: border-box;
+}
+
+.say-about-us-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.say-about-us-title{
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 40px;
+    color: #FFFFFF;
+    margin-bottom: 25px;
+}
+
+.say-about-us-list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+}
+
+.say-about-us-item{
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 66px;
+    margin-bottom: 50px;
+    text-align: center;
+    transform: translateY(250px);
+    transition: 0.5s;
+    position:absolute;
+    width: 1160px;
+    box-sizing: border-box;
+    z-index: -2;
+}
+
+
+.say-about-us-item.active{
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.say-about-us-comment{
+    margin: 30px 0 0;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+    color: #BBBBBB;
+    box-sizing: border-boxs;
+
+}
+
+.say-about-us-item-name{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 27px;
+    color: #18CFAB;
+    text-transform: uppercase;
+}
+
+.say-about-us-item-profesion{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 30px;
+    color: #BBBBBB;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+
+
+.say-about-us-item-img{
+    border: rgba(31, 218, 181, 0.2) 12px solid;
+    border-radius: 50%;
+    height: 142px;
+}
+
+
+
+
+.say-about-us-change-content{
+    margin: 510px 38% 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.say-about-us-dots{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 27px;
+}
+
+.say-about-us-arrow{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #BBBBBB;
+    width: 31px;
+    height: 31px;
+    border: 1px solid #BBBBBB;
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+.say-about-us-arrow:hover{
+    background-color: #18CFAB;
+    color: #FFFFFF;
+}
+
+
+.say-about-us-img-dot{
+    border: rgba(31, 218, 181, 0.2) 6px solid;
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
+
+.say-about-us-img-dot:hover{
+    transform: translateY(-3px);
+}
+
+.say-about-us-img-dot.active{
+        transform: translateY(-11px);
+        transition: 0.5s;
+}
 /* gallery of best image*/
 
 /* footer*/
