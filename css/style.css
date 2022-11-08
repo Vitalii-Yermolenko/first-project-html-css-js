@@ -395,8 +395,7 @@ font-family: 'Material Symbols Outlined';
 .our-work-img-list{
     display: grid;
     grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(3,206px);
-    height: 618px;
+
 }
 
 .our-work-img-item{

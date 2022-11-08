@@ -2,10 +2,10 @@
 .our-work-load-btn-content{
     position: relative;
 }
-.loader.disable-btn{
+.loader.disable{
     display: none;
 }
-.loader.active-btn{
+.loader.active{
     display: block;
 }
 .loader{
